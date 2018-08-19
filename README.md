@@ -18,11 +18,11 @@ yarn add expo-react-native-shadow
 
 ### Implementation
 
-1. `import {BoxShadow} from 'expo-react-native-shadow'` (For BorderShadow, import it as 'BoxShadow')
+1. `import { BoxShadow, BorderShadow } from 'expo-react-native-shadow'`
 
 2. Create a styles/options object:
 ```js
-const shadowOpt = {
+const shadowStyle = {
   width: 100,
   height: 100,
   color: "#000",
@@ -35,7 +35,7 @@ const shadowOpt = {
 }
 ```
 
-3. Wrap your component in `BoxShadow` or `BorderShadow`:
+3. Wrap your component in `BoxShadow` or `BorderShadow`, passing in the `shadowStyle` object:
 ```js
 import React, { Component } from 'react'
 import { TouchableHighlight } from 'react-native'
@@ -74,20 +74,24 @@ export default class VideoCell extends Component {
 ## Styles API
 
 ### BoxShadow
-+ **width**: you must set the value the same as your child component
-+ **height**: the same as above
-+ **color**: the color of shadow,it **doesn't support rgba now**,you may use opacity
-+ **border**: the width of shadow , cannot less than 0
-+ **radius**: the same value as the "borderRadius" of chileElement
-+ **opacity**: the opacity of shadow
-+ **x**: the offsetX of shadow
-+ **y**: the offsetY of shadow
-+ **style**: the style you want to add to the wrapper box
++ **width**: Must be set to the same value as the child component.
++ **height**: Must be set to the same value as the child component.
++ **color**: Color of shadow. **RGBA is not supported, however you may use the opacity property.**
++ **border**: Width of the shadow, cannot be a negative number.
++ **radius**: Should be set to the `borderRadius` of child component.
++ **opacity**: the `opacity` of the shadow.
++ **x**: The `offsetX` of the shadow
++ **y**: The `offsetY` of the shadow
++ **style**: A styles object to be applied to the wrapping `<View>` tag of the SVG component.
 
 ### BorderShadow
-+ **width**,**color**,**border**,**opacity**,**style**: these attributes are the same as above
-+ **side**: "top" or "bottom",you can choose where the shadow shows
-+ **inset**: `true` or `false`,this is similar to CSS - `shadow: color inset`
++ **width**: Same as above.
++ **color**: Same as above. 
++ **border**: Same as above.
++ **opacity**: Same as above.
++ **style**: Same as above.
++ **side**: `"top"` or `"bottom"` - Display position of the border shadow.
++ **inset**: `true` or `false` - This is similar to CSS - `shadow: color inset`
 
 
 [npm-url]: https://npmjs.org/package/expo-react-native-shadow
