@@ -2,10 +2,9 @@
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 ---
 
-This is a port of [`react-native-shadow`](https://github.com/879479119/react-native-shadow) that is compatible with Expo and replaces the react-native-svg tags in React Native Shadow with Expo's SVG API. That means no ejecting!
+This is a port of [`react-native-shadow`](https://github.com/879479119/react-native-shadow) that is **compatible with Expo** and replaces the react-native-svg tags in React Native Shadow with Expo's SVG API. **That means no ejecting!**
 
 The documentation is the same as `react-native-shadow`'s:
-
 
 ![Demo](http://7xsm7w.com1.z0.glb.clouddn.com/20161015151531.png)
 
@@ -39,42 +38,33 @@ const shadowOpt = {
 3. Wrap your component in `BoxShadow` or `BorderShadow`:
 ```js
 import React, { Component } from 'react'
-import {
-  StyleSheet,
-  View,
-  Text,
-  ScrollView,
-  Image,
-  TouchableHighlight
-} from 'react-native'
+import { TouchableHighlight } from 'react-native'
+import { BoxShadow } from 'expo-react-native-shadow'
 
-import { BoxShadow } from 'react-native-shadow'
+const buttonStyle = {
+  position: "relative",
+  width: 160,
+  height: 170,
+  backgroundColor: "#fff",
+}
+
+const shadowStyle = {
+  width: buttonStyle.width,
+  height: buttonStyle.height,
+  color: "#000",
+  border: 2,
+  radius: 3,
+  opacity: 0.2,
+  x: 0,
+  y: 3,
+  style: { marginVertical: 5 }
+}
 
 export default class VideoCell extends Component {
   render = () => {
-    const shadowOpt = {
-      width: 160,
-      height: 170,
-      color: "#000",
-      border: 2,
-      radius: 3,
-      opacity: 0.2,
-      x: 0,
-      y: 3,
-      style: { marginVertical: 5 }
-    }
-
     return (
-      <BoxShadow setting={shadowOpt}>
-        <TouchableHighlight style={{
-          position: "relative",
-          width: 160,
-          height: 170,
-          backgroundColor: "#fff",
-          borderRadius: 3,
-          overflow: "hidden"
-        }}>
-      </TouchableHighlight>
+      <BoxShadow setting={shadowStyle}>
+        <TouchableHighlight style={buttonStyle} />
       </BoxShadow>
     )
   }
@@ -100,6 +90,6 @@ export default class VideoCell extends Component {
 + **inset**: `true` or `false`,this is similar to CSS - `shadow: color inset`
 
 
-[npm-url]: https://npmjs.org/package/react-native-shadow
-[downloads-image]: http://img.shields.io/npm/dm/react-native-shadow.svg
-[npm-image]: http://img.shields.io/npm/v/react-native-shadow.svg
+[npm-url]: https://npmjs.org/package/expo-react-native-shadow
+[downloads-image]: http://img.shields.io/npm/dm/expo-react-native-shadow.svg
+[npm-image]: http://img.shields.io/npm/v/expo-react-native-shadow.svg
