@@ -1,0 +1,24 @@
+{
+  "name": "expo-react-native-shadow",
+  "version": "1.0",
+  "description": "Expo-compatible version of react-native-shadow, replacing react-native-svg components with Expo's RNSVG components. Does not require ejecting.",
+  "main": "index.js",
+  "author": "Gavin Ray",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GavinRay97/expo-react-native-shadow"
+  },
+  "keywords": [
+    "expo",
+    "expo-react-native",
+    "react-native",
+    "react-native-shadow",
+    "expo-react-native-shadow",
+    "android",
+    "shadow"
+  ],
+  "bugs": {
+  	"url": "https://github.com/GavinRay97/expo-react-native-shadow/issues"
+  }
+}
