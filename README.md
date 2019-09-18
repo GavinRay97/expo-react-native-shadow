@@ -11,10 +11,12 @@ The documentation is the same as `react-native-shadow`'s:
 ## HOW TO USE IT
 
 ### Installation
-you must run the command to install the plugin and its dependences in you project
+**Yarn**
 ```bash
 yarn add expo-react-native-shadow
 ``` 
+**NPM**
+npm install expo-react-native-shadow
 
 ### Implementation
 

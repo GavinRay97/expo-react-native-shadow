@@ -20,5 +20,8 @@
   ],
   "bugs": {
     "url": "https://github.com/GavinRay97/expo-react-native-shadow/issues"
+  },
+  "dependencies": {
+    "react-native-svg": "^9.5.3"
   }
 }
